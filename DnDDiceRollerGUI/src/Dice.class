@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Dice {
+	
+	public List roll(int diceNumber, int diceSides) {
+		List<int> diceArray = new ArrayList<int>();
+		for (int i = 0; i < diceNumber; i++) {
+			diceArray.add(Math.random() * diceSides + 1);
+		}
+		return diceArray;
+	}
+	
+	public int get() {
+	    //Description Variable Input
+	    String descInput = descriptionField.getText();
+	    
+	    //Spinners
+	    JLabel numDiceLabel = new JLabel("Number Of Dice");
+	    myFrame.add(numDiceLabel);
+	    JSpinner numDice = new JSpinner();
+	    myFrame.add(numDice);
+	    
+	    JLabel numSidesLabel = new JLabel("Number Of Sides");
+	    myFrame.add(numSidesLabel);
+	    JSpinner numSides = new JSpinner();
+	    myFrame.add(numSides);
+	}
+
+}
